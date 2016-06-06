@@ -134,6 +134,7 @@ body {
   position: relative;
   max-width: 350px;
   max-height: 250px;
+  border: 1px solid #1a75ff;
 }
 
 .picture a img {
