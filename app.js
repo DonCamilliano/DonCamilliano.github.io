@@ -1,9 +1,15 @@
-// Highlight the top nav as scrolling occurs
-/*$('body').scrollspy({
-    target: '.navbar-fixed-top'
-});*/
-
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
+$(document).ready(function(){       
+   var scroll_start = 1000;
+   var startchange = $('#startchange');
+   var offset = startchange.offset();
+    if (startchange.length){
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $(".navbar-default").css('background-color', '#f0f0f0');
+       } else {
+          $('.navbar-default').css('background-color', 'transparent');
+       }
+   });
+    }
 });
